@@ -793,8 +793,7 @@ def trainCNN(options, args, pam_updates=None):
 
         occupancy_0MT = np.count_nonzero(input_Q_abs.reshape(len(input_Q),48),axis=1)
         occupancy_1MT = np.count_nonzero(input_Q_abs.reshape(len(input_Q),48)>1.,axis=1)
-        occupancy=occupancy_0MT
-        if(not options.skipPlot): plotHist(occupancy.flatten(),"occ",xtitle="occupancy",ytitle="evts",
+        if(not options.skipPlot): plotHist(occupancy_1MT.flatten(),"occ",xtitle="occupancy",ytitle="evts",
                                                stats=False,logy=True,nbins=50,lims=[0,50])
 
         # to generate event displays
