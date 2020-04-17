@@ -962,6 +962,6 @@ if __name__== "__main__":
     parser.add_option("--quickTrain", action='store_true', default = False,dest="quickTrain", help="train w only 5k events for testing purposes")
     parser.add_option("--nCSV", type='int', default = 50, dest="nCSV", help="n of validation events to write to csv")
     parser.add_option("--maxVal", type='int', default = -1, dest="maxVal", help="n of validation events to consider")
-    parser.add_option("--rescaleInputToMax", action='store_true', default = False,dest="rescaleInputToMax", help="recale the input images so the maximum deposit is 1. Else normalize")
+    parser.add_option("--rescaleInputToMax", type='int', default=1, dest="rescaleInputToMax", help="recale the input images so the maximum deposit is 1. Else normalize")
     (options, args) = parser.parse_args()
     trainCNN(options,args)
