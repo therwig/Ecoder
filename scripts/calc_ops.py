@@ -137,3 +137,7 @@ cnn2 = CNN_MACs(inX, inY, nF1, 5, nF2)
 cnn3 = CNN_MACs(inX, inY, nF2, 3, nF3)
 dense = (inX*inY*nF3)*nOut + 16*16
 print("c4,4,4 k5,5,3: {}+{} = {}".format(cnn1+cnn2+cnn3,dense,cnn1+cnn2+cnn3+dense))
+
+
+cnn = CNN_MACs(inX=8, inY=8, inChan=1, kernel=3, nFilter=8)
+print('8x8 cnn: ',cnn)
